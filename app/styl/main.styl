@@ -1,0 +1,108 @@
+padding = 10px
+indentValue = 2vw
+color = #d3d3d3
+textColor = #800000
+menuBarColor = white
+hoverColor = grey
+
+div
+	//border 1px solid black
+
+.centralBlock
+	min-height 700px
+	min-width 100px
+	background-color color
+	display flex
+	flex-direction column
+	color textColor
+	.heading
+		padding indentValue
+		font-size 24px
+		font-weight bold
+		background-color menuBarColor
+	.menuFlex
+		background-color menuBarColor
+		display flex
+		flex-direction row
+		align-items center
+		//column-gap indentValue
+		span
+			background-color grey
+		.menuItem
+			padding padding
+			a
+				text-decoration none
+				color grey
+				font-weight bold
+			a:hover
+				color textColor
+
+	.content
+		width 80%
+		display flex
+		flex-direction column
+		margin auto
+		padding padding
+
+.rowFlex
+	display flex
+	flex-direction row
+
+a
+	text-decoration none
+	color grey
+	font-weight bold
+a:hover
+	color textColor
+
+.post
+	border-radius 15px
+	background-color menuBarColor
+	padding padding
+	margin @padding
+	width 25%
+	.imagesFlexItem
+		height 45%
+	.heading
+		padding padding
+		font-size 18px
+		font-weight bold
+
+.largePost
+	border-radius 15px
+	background-color menuBarColor
+	padding padding
+	margin @padding
+	width 100%
+	.imagesFlexItem
+		height 45%
+	.heading
+		padding padding
+		font-size 18px
+		font-weight bold
+
+.columnFlex
+	display flex
+	flex-direction column
+
+details
+	.rowFlex
+		align-items center
+	.columnFlex
+		align-items: flex-start
+
+.options
+	margin padding
+	padding @margin
+
+@import textBlock
+@import rowOfImages
+@import mainMedia
+@import tableBlock
+
+
+
+
+
+
+

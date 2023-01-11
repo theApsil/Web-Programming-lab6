@@ -1,0 +1,26 @@
+mixin createMenuBar (title)
+	.menuFlex
+		if title == 'Главная страница'
+			span
+				.menuItem
+					a(href="index.html") Главная страница
+		else
+			.menuItem
+				a(href="index.html") Главная страница
+
+		//.menuItem
+		if title == 'Статистика'
+			span
+				.menuItem
+					a(href="Статистика.html") Статистика
+		else
+			.menuItem
+				a(href="Статистика.html") Статистика
+			//a(href="Статистика.html") Статистика
+		if title == 'Галерея'
+			span
+				.menuItem
+					a(href="Галерея.html") Галерея
+		else
+			.menuItem
+				a(href="Галерея.html") Галерея

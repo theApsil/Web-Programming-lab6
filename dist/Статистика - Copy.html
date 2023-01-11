@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Статистика</title>
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <div class="centralBlock">
+    <div class="heading">ИСТОРИЧЕСКИЙ<br/>РЕСУРС</div>
+        <div class="menuFlex">
+          <div class="menuItem">
+            <!--if title == 'Главная страница'a(href="index.html") Главная страница
+            -->
+            <!--else--><a href="index.html">Главная страница</a>
+          </div>
+          <div class="menuItem">
+            <!--if title == 'Синтаксис CSS'
+            a(href="СинтаксисCSS.html")
+            	span Статистика
+            -->
+            <!--else--><a href="Статистика.html">Статистика</a>
+          </div>
+          <div class="menuItem"><a href="">Галерея</a></div>
+        </div>
+    <div class="content">
+      <div class="options">
+                <details>
+                  <summary>Сортировка</summary>
+                  <div class="rowFlex">
+                    <p>Первый уровень:
+                                    <select>
+                                      <option>Нет</option>
+                                      <option>Год начала</option>
+                                      <option>Год конца</option>
+                                      <option>Первая сторона конфликта</option>
+                                      <option>Вторая сторона конфликта</option>
+                                      <option>Потери первой стороны в тыс.</option>
+                                      <option>Потери второй стороны в тыс.</option>
+                                      <option>Мирный договор</option>
+                                    </select>
+                    </p>
+                    <p>По убыванию?
+                      <input type="checkbox">
+                    </p>
+                  </div>
+                  <div class="rowFlex">
+                    <p>Второй уровень:
+                                    <select>
+                                      <option>Нет</option>
+                                      <option>Год начала</option>
+                                      <option>Год конца</option>
+                                      <option>Первая сторона конфликта</option>
+                                      <option>Вторая сторона конфликта</option>
+                                      <option>Потери первой стороны в тыс.</option>
+                                      <option>Потери второй стороны в тыс.</option>
+                                      <option>Мирный договор</option>
+                                    </select>
+                    </p>
+                    <p>По убыванию?
+                      <input type="checkbox">
+                    </p>
+                  </div>
+                  <div class="rowFlex">
+                    <p>Третий уровень:
+                                    <select>
+                                      <option>Нет</option>
+                                      <option>Год начала</option>
+                                      <option>Год конца</option>
+                                      <option>Первая сторона конфликта</option>
+                                      <option>Вторая сторона конфликта</option>
+                                      <option>Потери первой стороны в тыс.</option>
+                                      <option>Потери второй стороны в тыс.</option>
+                                      <option>Мирный договор</option>
+                                    </select>
+                    </p>
+                    <p>По убыванию?
+                      <input type="checkbox">
+                    </p>
+                  </div>
+                </details>
+                <details>
+                  <summary>Фильтр</summary>
+                  <div class="rowFlex">
+                    <p>Наименование</p>
+                    <input type="text">
+                  </div>
+                  <div class="rowFlex">
+                    <p>Год начала</p>
+                    <input type="number" min="1" max="2022">
+                  </div>
+                  <div class="rowFlex">
+                    <p>Год конца</p>
+                    <input type="number" min="1" max="2022">
+                  </div>
+                  <div class="rowFlex">
+                    <p>Первая сторона конфликта</p>
+                    <input type="text">
+                  </div>
+                  <div class="rowFlex">
+                    <p>Вторая сторона конфликта</p>
+                    <input type="text">
+                  </div>
+                  <div class="rowFlex">
+                    <p>Потери первой стороны в тыс.</p>
+                    <p>oт</p>
+                    <input type="number" min="0">
+                    <p>до</p>
+                    <input type="number" min="0">
+                  </div>
+                  <div class="rowFlex">
+                    <p>Потери первой стороны в тыс.</p>
+                    <p>oт</p>
+                    <input type="number" min="0">
+                    <p>до</p>
+                    <input type="number" min="0">
+                  </div>
+                </details>
+                <details>
+                  <summary>График</summary>
+                  <div class="columnFlex">
+                    <p>Значение по оси ОХ:</p>
+                    <div class="rowFlex">
+                      <p>Страна</p>
+                      <input type="ratio">
+                    </div>
+                    <div class="rowFlex">
+                      <p>Наименование войны</p>
+                      <input type="ratio">
+                    </div>
+                  </div>
+                  <div class="columnFlex">
+                    <p>Результат:</p>
+                    <div class="rowFlex">
+                      <p>Максимальные потери</p>
+                      <input type="checkbox">
+                    </div>
+                    <div class="rowFlex">
+                      <p>Минимальные потери</p>
+                      <input type="checkbox">
+                    </div>
+                    <div class="rowFlex">
+                      <p>Продолжительность боевых действий</p>
+                      <input type="checkbox">
+                    </div>
+                  </div>
+                </details>
+      </div>
+      <div class="tableBlock">
+        <table>
+          <tr>
+            <th>Наименование</th>
+            <th>Год начала</th>
+            <th>Год конца</th>
+            <th>Первая сторона конфликта</th>
+            <th>Вторая сторона конфликта</th>
+            <th>Потери первой стороны в тыс.</th>
+            <th>Потери второй стороны в тыс.</th>
+            <th>Мирный договор</th>
+          </tr>
+          <tr>
+            <td>Столетняя война</td>
+            <td>1337</td>
+            <td>1453</td>
+            <td>Англия</td>
+            <td>Франция</td>
+            <td>60</td>
+            <td>40</td>
+            <td>Аррасский договор</td>
+          </tr>
+          <tr>
+            <td>Русско-японская война</td>
+            <td>1904</td>
+            <td>1905</td>
+            <td>Российская Империя</td>
+            <td>Японская Империя</td>
+            <td>55</td>
+            <td>55</td>
+            <td>Портсмутский мирный договор</td>
+          </tr>
+          <tr>
+            <td>Отечественная война</td>
+            <td>1812</td>
+            <td>1812</td>
+            <td>Российская Империя</td>
+            <td>Французская Империя</td>
+            <td>240</td>
+            <td>260</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>Русско-польская война</td>
+            <td>1654</td>
+            <td>1667</td>
+            <td>Русское царство</td>
+            <td>Речь Посполитая</td>
+            <td>80</td>
+            <td>120</td>
+            <td>Андрусовское перемирие</td>
+          </tr>
+          <tr>
+            <td>Северная война</td>
+            <td>1700</td>
+            <td>1721</td>
+            <td>Русское царство</td>
+            <td>Королевство Швеция</td>
+            <td>110</td>
+            <td>140</td>
+            <td>Ништадтский мир</td>
+          </tr>
+          <tr>
+            <td>Англо-занзибарская война</td>
+            <td>1896</td>
+            <td>1896</td>
+            <td>Британская империя</td>
+            <td>Султанат Занзибар</td>
+            <td>0</td>
+            <td>0.5</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>Гражданская война в Нигерии</td>
+            <td>1967</td>
+            <td>1970</td>
+            <td>Биафра</td>
+            <td>Нигерия</td>
+            <td>1000</td>
+            <td>200</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>Семилетняя война</td>
+            <td>1756</td>
+            <td>1763</td>
+            <td>Королевство Пруссия</td>
+            <td>Российская Империя</td>
+            <td>400</td>
+            <td>138</td>
+            <td>Петербургский мирный договор</td>
+          </tr>
+          <tr>
+            <td>Русско-персидская</td>
+            <td>1804</td>
+            <td>1813</td>
+            <td>Российская Империя</td>
+            <td>Персия</td>
+            <td>92</td>
+            <td>101</td>
+            <td>Гюлестанский мир</td>
+          </tr>
+          <tr>
+            <td>Русско-турецкая война</td>
+            <td>1787</td>
+            <td>1791</td>
+            <td>Российская Империя</td>
+            <td>Османская Империя</td>
+            <td>55</td>
+            <td>120</td>
+            <td>Ясский мирный договор</td>
+          </tr>
+          <tr>
+            <td>Вторая Итало-эфиопская война</td>
+            <td>1935</td>
+            <td>1936</td>
+            <td>Италия</td>
+            <td>Эфиопская Империя</td>
+            <td>10</td>
+            <td>275</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>Австро-итальянская война</td>
+            <td>1848</td>
+            <td>1849</td>
+            <td>Италия</td>
+            <td>Австрийская Империя</td>
+            <td>0.9</td>
+            <td>2</td>
+            <td>Миланский мирный договор</td>
+          </tr>
+          <tr>
+            <td>Ирано-иракская война</td>
+            <td>1980</td>
+            <td>1988</td>
+            <td>Ирак</td>
+            <td>Иран</td>
+            <td>180</td>
+            <td>500</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>Советско-польская война</td>
+            <td>1919</td>
+            <td>1921</td>
+            <td>РСФСР</td>
+            <td>Польская республика</td>
+            <td>70</td>
+            <td>47</td>
+            <td>Рижский мирный договор</td>
+          </tr>
+          <tr>
+            <td>Советско-финляндская война</td>
+            <td>1939</td>
+            <td>1940</td>
+            <td>СССР</td>
+            <td>Финляндия</td>
+            <td>126</td>
+            <td>25</td>
+            <td>Московский мирный договор</td>
+          </tr>
+          <tr>
+            <td>Карабахская война</td>
+            <td>1992</td>
+            <td>1994</td>
+            <td>НКР</td>
+            <td>Азербайджан</td>
+            <td>5.8</td>
+            <td>11.5</td>
+            <td>Соглашение о прекращении огня</td>
+          </tr>
+          <tr>
+            <td>Футбольная война</td>
+            <td>1969</td>
+            <td>1969</td>
+            <td>Сальвадор</td>
+            <td>Гондурас</td>
+            <td>0.7</td>
+            <td>1.2</td>
+            <td>Соглашение о прекращении огня</td>
+          </tr>
+          <tr>
+            <td>Операция «Союзная сила»</td>
+            <td>1999</td>
+            <td>1999</td>
+            <td>НАТО</td>
+            <td>Югославия</td>
+            <td>0.002</td>
+            <td>0.2</td>
+            <td>Кумановское соглашение</td>
+          </tr>
+          <tr>
+            <td>Японо-Китайская война</td>
+            <td>1937</td>
+            <td>1945</td>
+            <td>Китайская Республика</td>
+            <td>Японская Империя</td>
+            <td>28530</td>
+            <td>700</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>Испано-рифская война</td>
+            <td>1921</td>
+            <td>1926</td>
+            <td>Рифская республика</td>
+            <td>Испания</td>
+            <td>15</td>
+            <td>31</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>Афганская война</td>
+            <td>1979</td>
+            <td>1989</td>
+            <td>СССР</td>
+            <td>Афганские моджахеды</td>
+            <td>55</td>
+            <td>80</td>
+            <td>Женевские соглашения</td>
+          </tr>
+          <tr>
+            <td>Арабо-израильская война</td>
+            <td>1947</td>
+            <td>1949</td>
+            <td>Израиль</td>
+            <td>Египет</td>
+            <td>6</td>
+            <td>10</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>Ввод войск в Чехословакию</td>
+            <td>1968</td>
+            <td>1968</td>
+            <td>СССР</td>
+            <td>ЧССР</td>
+            <td>0.096</td>
+            <td>0.108</td>
+            <td>Московский протокол</td>
+          </tr>
+          <tr>
+            <td>Война во Вьетнаме</td>
+            <td>1955</td>
+            <td>1975</td>
+            <td>США</td>
+            <td>ДРВ</td>
+            <td>318</td>
+            <td>850</td>
+            <td>Парижское мирное соглашение</td>
+          </tr>
+          <tr>
+            <td>Корейская война</td>
+            <td>1950</td>
+            <td>1953</td>
+            <td>Республика Корея</td>
+            <td>КНДР</td>
+            <td>137</td>
+            <td>112</td>
+            <td>Корейское соглашение о перемирии</td>
+          </tr>
+          <tr>
+            <td>Итало-турецкая война</td>
+            <td>1911</td>
+            <td>1912</td>
+            <td>Королевство Италия</td>
+            <td>Османская империя</td>
+            <td>8</td>
+            <td>15</td>
+            <td>Лозаннский мирный договор</td>
+          </tr>
+          <tr>
+            <td>Чакская война</td>
+            <td>1932</td>
+            <td>1935</td>
+            <td>Боливия</td>
+            <td>Парагвай</td>
+            <td>40</td>
+            <td>31</td>
+            <td>Чакская конференция</td>
+          </tr>
+          <tr>
+            <td>Вторая конголезская война</td>
+            <td>1998</td>
+            <td>2003</td>
+            <td>ДР Конго</td>
+            <td>ДКД</td>
+            <td>2000</td>
+            <td>2000</td>
+            <td>Соглашение в Претории</td>
+          </tr>
+          <tr>
+            <td>Война Золотого Трона</td>
+            <td>1900</td>
+            <td>1900</td>
+            <td>Британская Империя</td>
+            <td>Империя Ашанти</td>
+            <td>1</td>
+            <td>2</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>Армяно-грузинская война</td>
+            <td>1918</td>
+            <td>1918</td>
+            <td>Грузия</td>
+            <td>Армения</td>
+            <td>3</td>
+            <td>3</td>
+            <td>Садахловское мирное соглашение</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/main.js"></script>
+  </div>
+</html>

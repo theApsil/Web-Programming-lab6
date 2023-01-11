@@ -1,0 +1,23 @@
+mixin createSorting(optionList)
+    details
+        summary Сортировка
+        .rowFlex
+            p Первый уровень:
+                include selectOptions
+                +createSelectOptions(optionList)
+            p По убыванию?
+                input(type="checkbox")
+
+        .rowFlex
+            p Второй уровень:
+                include selectOptions
+                +createSelectOptions(optionList)
+            p По убыванию?
+                input(type="checkbox")
+
+        .rowFlex
+            p Третий уровень:
+                include selectOptions
+                +createSelectOptions(optionList)
+            p По убыванию?
+                input(type="checkbox")

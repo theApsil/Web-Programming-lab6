@@ -1,0 +1,15 @@
+extends template
+block variables
+    -   var title = 'CSS шрифт'
+block content
+    .imagesFlex
+        include mixins/imageBlock
+        +createImageBlock("img/css-probely.png", '33.33%')
+        +createImageBlock("img/css-text.png", '33.33%')
+        +createImageBlock("img/css-text-decoration.png", '33.33%')
+    .textBlock
+        p font - универсальное свойство, которое позволяет одновременно задать несколько характеристик шрифта и текста. <br/> Его синтаксис font: [font-style||font-variant||font-weight] font-size [line-height] font-family | inherit
+    .textBlock
+        p font-style - определяет начертание шрифта: обычное, курсивное или наклонное. Когда для текста установлено курсивное или наклонное начертание, браузер обращается к системе для поиска подходящего шрифта. Если заданный шрифт не найден, браузер использует специальный алгоритм для имитации нужного вида текста. Результат и качество при этом могут получиться неудовлетворительными, особенно при печати документа. <br/>Его синтаксис font-style: normal | italic | oblique | inherit
+
+
