@@ -31,7 +31,7 @@ let statistics = {
         return arrKey;
     },
     print: function() {
-        let html = '<table><tr>';
+        let html = '<table id="table-001"><tr>';
         let arrKey = this.getAllKey();
         for(let key in columnNames) {
             html += `<th>${ columnNames[key] }</th>`;

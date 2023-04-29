@@ -1,28 +1,23 @@
 mixin createGraph(optionList)
-    details
-        summary График
-        .columnFlex
-            p Значение по оси ОХ:
-            .rowFlex
-                p=optionList[0]
-                    input(type="radio")
-            .rowFlex
-                p=optionList[1]
-                    input(type="radio")
-            .rowFlex
-                p=optionList[2]
-                    input(type="radio")
-        .columnFlex
-            p Результат:
-            .rowFlex
-                p=optionList[3]
-                    input(type="checkbox")
-            .rowFlex
-                p=optionList[4]
-                    input(type="checkbox")
-            .rowFlex
-                p=optionList[5]
-                    input(type="checkbox")
+    details График
+        .block-011
+            summary 
+            .columnFlex
+                p <b>Значение по оси ОХ:</b>
+                .rowFlex
+                    p=optionList[0]
+                        input(type="radio", name='ox')
+                .rowFlex
+                    p=optionList[1]
+                        input(type="radio", name='ox', checked)
+            .columnFlex
+                p  <b>Результат:</b>
+                .rowFlex
+                    p=optionList[3]
+                        input(type="radio", name='result')
+                .rowFlex
+                    p=optionList[4]
+                        input(type="radio", name='result', checked)
 
 
 

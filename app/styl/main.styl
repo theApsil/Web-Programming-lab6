@@ -62,7 +62,7 @@ a:hover
 	margin @padding
 	width 25%
 	.imagesFlexItem
-		height 45%
+		height: auto;
 	.heading
 		padding padding
 		font-size 18px
@@ -100,9 +100,66 @@ details
 @import mainMedia
 @import tableBlock
 
+// ***
+// Реализация графика и галереи
+// ***
 
+// Стили для галереи
 
+#gallery
+	width: 90%
+	margin: auto
+	text-align: center
+	img
+		align middle 
+		width 300px //auto
+		height 200px
+		margin 10px
+		border-radius: 7px
+		object-fit: cover
+		image-rendering: optimizeQuality
+		box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5)
 
+.zoop
+	height: 70px
 
+.gal-01
+	color black
+	text-align: center
+	font-size: 27px
+	margin 5px
+	margin-bottom 20px
 
+// График
 
+.block-graf
+	bord()
+	width: 90%
+	height: auto
+	margin:  30px auto
+
+	width: 80%
+	margin: 20px auto
+	padding: 10px
+	background-color: white
+	border-radius: 7px
+	
+.block-graf > p
+	font-size: x-large
+	text-align: center
+	margin 10px
+
+.curr-graff
+	//bord()
+	height 300px
+	width 500px
+	margin: auto
+
+// Запрещаю сильное уменьшение размера
+
+html 
+	min-width 600px
+
+@media (min-width 800px)
+	.block-graf
+		width: 800px

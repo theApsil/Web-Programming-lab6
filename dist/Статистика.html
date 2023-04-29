@@ -30,53 +30,56 @@
               <div id="filterDiv"></div>
               <input type="button" value="Фильтр" onclick="buttonFiltering()">
             </details>
-                        <details>
-                          <summary>График</summary>
-                          <div class="columnFlex">
-                            <p>Значение по оси ОХ:</p>
-                            <div class="rowFlex">
-                              <p>Население
-                                <input type="radio">
-                              </p>
+                        <details>График
+                          <div class="block-011">
+                            <summary> </summary>
+                            <div class="columnFlex">
+                              <p><b>Значение по оси ОХ:</b></p>
+                              <div class="rowFlex">
+                                <p>Префектура
+                                  <input type="radio" name="ox">
+                                </p>
+                              </div>
+                              <div class="rowFlex">
+                                <p>Год основания
+                                  <input type="radio" name="ox" checked>
+                                </p>
+                              </div>
                             </div>
-                            <div class="rowFlex">
-                              <p>Площадь
-                                <input type="radio">
-                              </p>
-                            </div>
-                            <div class="rowFlex">
-                              <p>Год основания
-                                <input type="radio">
-                              </p>
-                            </div>
-                          </div>
-                          <div class="columnFlex">
-                            <p>Результат:</p>
-                            <div class="rowFlex">
-                              <p>Максимальное население
-                                <input type="checkbox">
-                              </p>
-                            </div>
-                            <div class="rowFlex">
-                              <p>Максимальная пощадь
-                                <input type="checkbox">
-                              </p>
-                            </div>
-                            <div class="rowFlex">
-                              <p>Количество построенных городов по году основания
-                                <input type="checkbox">
-                              </p>
+                            <div class="columnFlex">
+                              <p> <b>Результат:</b></p>
+                              <div class="rowFlex">
+                                <p>Максимальное население
+                                  <input type="radio" name="result">
+                                </p>
+                              </div>
+                              <div class="rowFlex">
+                                <p>Максимальная пощадь
+                                  <input type="radio" name="result" checked>
+                                </p>
+                              </div>
                             </div>
                           </div>
                         </details>
             <input type="button" value="Сбросить все" onclick="buttonReset()">
+            <input id="butt-graf" type="button" value="Построить График" onclick="buttonReset()">
           </div>
         </form>
-        <tableBlock id="table"></tableBlock>
       </body>
+      <div class="block-graf">
+        <p>График:</p>
+        <div id="graf-container">
+          <div class="curr-graff"></div>
+        </div>
+      </div>
+      <tableBlock id="table"></tableBlock>
       <script src="js/sortingAndFiltering.js"></script>
     </div>
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/main.js"></script>
   </div>
+  <footer> 
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="js/js-3-diagramm.js"></script>
+  </footer>
 </html>

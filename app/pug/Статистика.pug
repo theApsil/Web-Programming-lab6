@@ -1,7 +1,7 @@
 extends template
 block variables
     -   var title = 'Список самых больших городов'
-    -   const graphOptionList = ["Население","Площадь","Год основания","Максимальное население","Максимальная пощадь", "Количество построенных городов по году основания"]
+    -   const graphOptionList = ["Префектура","Год основания"," ","Максимальное население","Максимальная пощадь", "Количество построенных городов по году основания"]
 block content
     body(onload='createStatsElements()')
         form
@@ -17,11 +17,22 @@ block content
                 include mixins/Graph
                 +createGraph(graphOptionList)
                 input(type="button" value="Сбросить все" onclick="buttonReset()")
-        tableBlock(id = 'table')
+                input#butt-graf(type="button" value="Построить График" onclick="buttonReset()")
+    
+    div.block-graf
+        p График:
+        div#graf-container
+            div.curr-graff
+
+    tableBlock(id = 'table')
 
     script(src = 'js/sortingAndFiltering.js')
 
+block head
 
+block footer
+    script(src="https://d3js.org/d3.v5.min.js")
+    script(src='js/js-3-diagramm.js')
 
 
 

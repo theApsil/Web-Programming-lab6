@@ -59,7 +59,7 @@ a:hover {
   width: 25%;
 }
 .post .imagesFlexItem {
-  height: 45%;
+  height: auto;
 }
 .post .heading {
   padding: 10px;
@@ -245,4 +245,58 @@ table,
 td,
 th {
   border: 1px solid #800000;
+}
+#gallery {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
+#gallery img {
+  align: middle;
+  width: 300px;
+  height: 200px;
+  margin: 10px;
+  border-radius: 7px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  image-rendering: optimizeQuality;
+  box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.5);
+}
+.zoop {
+  height: 70px;
+}
+.gal-01 {
+  color: #000;
+  text-align: center;
+  font-size: 27px;
+  margin: 5px;
+  margin-bottom: 20px;
+}
+.block-graf {
+  width: 90%;
+  height: auto;
+  margin: 30px auto;
+  width: 80%;
+  margin: 20px auto;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 7px;
+}
+.block-graf > p {
+  font-size: x-large;
+  text-align: center;
+  margin: 10px;
+}
+.curr-graff {
+  height: 300px;
+  width: 500px;
+  margin: auto;
+}
+html {
+  min-width: 600px;
+}
+@media (min-width: 800px) {
+  .block-graf {
+    width: 800px;
+  }
 }

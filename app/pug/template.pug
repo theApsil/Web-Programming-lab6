@@ -9,6 +9,7 @@ html
 		link(rel="stylesheet", href= 'css/main.css')
 		-	const menuHeadings = ["Главная страница","Список самых больших городов","Туристическая памятка"]
 		-	const url = ["index.html","Статистика.html","Памятка.html"]
+		block head
 	.centralBlock
 
 		-	var i = 0
@@ -25,3 +26,5 @@ html
 
 		script(src="js/jquery-3.5.1.min.js")
 		script(src="js/main.js")
+	footer 
+		block footer
